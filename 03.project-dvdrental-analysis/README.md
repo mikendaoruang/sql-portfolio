@@ -1,1 +1,40 @@
+# DVD Rental Analysis (PostgreSQL)
 
+SQL queries on the `dvdrental` sample database, written in pgAdmin 4 with PostgreSQL 18. The database models a DVD rental store: films, actors, customers, rentals and payments.
+
+This project follows the PostgreSQL section of my Udemy SQL course. I add the queries here as I finish each lesson.
+
+## Database
+
+`dvdrental` has 15 tables, including `film`, `actor`, `category`, `customer`, `rental`, `payment` and `store`.
+
+To restore it, create an empty database named `dvdrental`, then run in the terminal:
+
+```bash
+pg_restore -U postgres -d dvdrental -v "path/to/dvdrental.tar"
+```
+
+## Progress
+
+| Topic | Status | File |
+|-------|--------|------|
+| Exploration with DISTINCT, COUNT, GROUP BY, ORDER BY | Done | [01_exploration_film.sql](queries/01_exploration_film.sql) |
+| EXTRACT | To do | |
+| WHERE, IN, LIKE | To do | |
+| GROUP BY and HAVING challenges | To do | |
+| JOINS (INNER and OUTER) | To do | |
+| Marketing challenges (best-earning films, best store, rentals by category, promo for customers with 40+ rentals) | To do | |
+
+## Questions answered so far
+
+**Exploration of the `film` table**
+
+- Which ratings and rental rates exist in the catalog? (`DISTINCT`)
+- How many films are there for each rating? (`GROUP BY rating`)
+- How many films are there for each rental rate? (`GROUP BY rental_rate`)
+
+Result: films are spread almost evenly across the three rental rates: 0.99 (341 films), 4.99 (336 films) and 2.99 (323 films).
+
+## Tools
+
+PostgreSQL 18 · pgAdmin 4
