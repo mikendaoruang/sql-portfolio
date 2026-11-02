@@ -13,4 +13,4 @@ The first projects come from my Udemy Certification - SQL for Data Science (with
 
 ## Tools
 
-Python · pandas · SQLite · Jupyter Notebook
+Python · pandas · SQLite · Jupyter Notebook · pgAdmin4 · PostgreSQL
