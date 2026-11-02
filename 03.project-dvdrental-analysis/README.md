@@ -20,7 +20,7 @@ pg_restore -U postgres -d dvdrental -v "path/to/dvdrental.tar"
 |-------|--------|------|
 | Exploration with DISTINCT, COUNT, GROUP BY, ORDER BY | Done | [01_exploration_film.sql](queries/01_exploration_film.sql) |
 | EXTRACT | Done | [02_extract_rental.sql](queries/02_extract_rental.sql) |
-| WHERE, IN, LIKE | To do | [03_where.sql](queries/03_where.sql) |
+| WHERE, IN, LIKE | To do | [03_where.sql](queries/03_where.sql) | [04_in.sql](queries/04_in.sql) |
 | GROUP BY and HAVING challenges | To do | |
 | JOINS (INNER and OUTER) | To do | |
 | Marketing challenges (best-earning films, best store, rentals by category, promo for customers with 40+ rentals) | To do | |
