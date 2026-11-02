@@ -19,7 +19,7 @@ pg_restore -U postgres -d dvdrental -v "path/to/dvdrental.tar"
 | Topic | Status | File |
 |-------|--------|------|
 | Exploration with DISTINCT, COUNT, GROUP BY, ORDER BY | Done | [01_exploration_film.sql](queries/01_exploration_film.sql) |
-| EXTRACT | To do | |
+| EXTRACT | Done | [02_extract_rental.sql](queries/02_extract_rental.sql) |
 | WHERE, IN, LIKE | To do | |
 | GROUP BY and HAVING challenges | To do | |
 | JOINS (INNER and OUTER) | To do | |
