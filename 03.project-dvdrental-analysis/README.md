@@ -22,7 +22,7 @@ pg_restore -U postgres -d dvdrental -v "path/to/dvdrental.tar"
 | EXTRACT | Done | [02_extract_rental.sql](queries/02_extract_rental.sql) |
 | WHERE, IN, LIKE | Done | [03_where.sql](queries/03_where.sql)<br>[04_in.sql](queries/04_in.sql)<br>[05_like.sql](queries/05_like.sql) |
 | GROUP BY and HAVING challenges | DONE | [06_group_by_challenge.sql](queries/06_group_by_challenge.sql)<br>[07_having_challenge.sql](queries/07_having_challenge.sql) |
-| JOINS (INNER and OUTER) | To do | [08_inner_join.sql](queries/08_inner_join.sql) |
+| JOINS (INNER and OUTER) | Done | [08_inner_join.sql](queries/08_inner_join.sql)<br>[09_outer_join.sql](queries/09_outer_join.sql) | |
 | JOINS challenge | To do | |
 | Marketing challenges (best-earning films, best store, rentals by category, promo for customers with 40+ rentals) | To do | |
 
