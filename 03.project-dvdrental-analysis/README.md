@@ -22,9 +22,9 @@ pg_restore -U postgres -d dvdrental -v "path/to/dvdrental.tar"
 | EXTRACT | Done | [02_extract_rental.sql](queries/02_extract_rental.sql) |
 | WHERE, IN, LIKE | Done | [03_where.sql](queries/03_where.sql)<br>[04_in.sql](queries/04_in.sql)<br>[05_like.sql](queries/05_like.sql) |
 | GROUP BY and HAVING challenges | DONE | [06_group_by_challenge.sql](queries/06_group_by_challenge.sql)<br>[07_having_challenge.sql](queries/07_having_challenge.sql) |
-| JOINS (INNER and OUTER) | Done | [08_inner_join.sql](queries/08_inner_join.sql)<br>[09_outer_join.sql](queries/09_outer_join.sql) | |
+| JOINS (INNER and OUTER) | Done | [08_inner_join.sql](queries/08_inner_join.sql)<br>[09_outer_join.sql](queries/09_outer_join.sql) |
 | JOINS challenge | Done | [10_join_challenge.sql](queries/10_join_challenge.sql) |
-| Marketing challenges (best-earning films, best store, rentals by category, promo for customers with 40+ rentals) | To do | [11_marketing_challenge_1.sql](queries/11_marketing_challenge_1.sql) |
+| Marketing challenges (best-earning films, best store, rentals by category, promo for customers with 40+ rentals) | To do | [11_marketing_challenge_1.sql](queries/11_marketing_challenge_1.sql)<br>[12_marketing_challenge_2.sql](queries/12_marketing_challenge_2.sql)|
 ## Questions answered so far
 
 **Exploration of the `film` table**
