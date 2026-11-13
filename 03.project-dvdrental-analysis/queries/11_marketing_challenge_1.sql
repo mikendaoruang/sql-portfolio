@@ -1,6 +1,11 @@
 -- Project: dvdrental analysis (PostgreSQL)
 -- Part 11: Marketing challenge 1 - which films earn the most?
 
+-- Challenge marketing 1 :
+--   - Show all films with their number of rentals and the revenue each film generated.
+--   - Useful tables: rental for the number of rentals, and film for the rental price of each film.
+--   - Hint: revenue per film = rental price x number of rentals per film.
+
 -- Q1: Which film earned the most, and how much did it earn?
 -- film -> inventory -> rental: inventory links each film to its rentals.
 
