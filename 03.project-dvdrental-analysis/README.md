@@ -27,13 +27,36 @@ pg_restore -U postgres -d dvdrental -v "path/to/dvdrental.tar"
 | Marketing challenges (best-earning films, best store, rentals by category, promo for customers with 40+ rentals) | Done | [11_marketing_challenge_1.sql](queries/11_marketing_challenge_1.sql)<br>[12_marketing_challenge_2.sql](queries/12_marketing_challenge_2.sql)<br>[13_marketing_challenge_3.sql](queries/13_marketing_challenge_3.sql)<br>[14_marketing_challenge_4.sql](queries/14_marketing_challenge_4.sql)|
 ## Questions answered so far
 
-**Exploration of the `film` table**
+## Questions answered
 
-- Which ratings and rental rates exist in the catalog? (`DISTINCT`)
-- How many films are there for each rating? (`GROUP BY rating`)
-- How many films are there for each rental rate? (`GROUP BY rental_rate`)
+### Exploration (`DISTINCT`, `COUNT`, `GROUP BY`, `ORDER BY`)
+- How many films are there for each rental rate? Almost evenly spread: 0.99 (341 films), 4.99 (336) and 2.99 (323).
 
-Result: films are spread almost evenly across the three rental rates: 0.99 (341 films), 4.99 (336 films) and 2.99 (323 films).
+### Dates (`EXTRACT`)
+- How many rentals per month, and how many rentals per customer? July 2005 is the busiest month (6,709 rentals, 11.2 per customer), followed by August 2005 (5,686). February 2006 has only 182 rentals, so the data is probably incomplete for that month.
+
+### Filtering (`WHERE`, `IN`, `LIKE`)
+- What is the description of the film "Texas Watch"? Found with `WHERE title = ...`.
+- Which rentals belong to customers 5, 9 and 10? 86 rentals, 2 of them not returned yet (`return_date` is `NULL`).
+- Which names start with "Jen"? Jennifer, Jennie and Jenny.
+- How many actors have a last name starting with "P"? 14. How many films have "Truman" in the title? 5.
+
+### Grouping and filtering groups (`GROUP BY`, `HAVING`)
+- How much did each staff member sell? Staff 1: 7,292 payments for 30,252.12. Staff 2: 7,304 payments for 31,059.92.
+- What is the average replacement cost per rating? From 18.96 (PG) to 20.40 (PG-13).
+- Who are the 5 best customers? Customers 148 (211.55), 526 (208.58), 178 (194.61), 137 (191.62) and 144 (189.60).
+- Which customers made more than 30 payments? 67 customers. Which ratings have an average rental duration above 5 days? NC-17, PG and PG-13.
+
+### Joins (`INNER JOIN`, `LEFT JOIN`)
+- How many copies of each film does each store have? 1,521 film-and-store combinations.
+- Which films have no copy in any store? 42 films (found with a `LEFT JOIN` and `IS NULL`).
+- What are the category and the language of every film? 1,000 films, joined across 4 tables.
+
+### Marketing challenges
+1. **Which films earn the most?** "Bucket Brotherhood" (34 rentals, 169.66), then "Scalawag Duck" (32 rentals, 159.68). Revenue is an estimate: number of rentals x rental rate.
+2. **Which store sold the most?** Store 2 with 30,683.13, against 30,628.91 for store 1.
+3. **How many rentals for Action, Comedy and Animation?** Animation 1,166, Action 1,112, Comedy 941.
+4. **Which customers should get a promo offer?** The 7 customers with at least 40 rentals. The top two are Eleanor Hunt (46) and Karl Seal (45).
 
 ## Tools
 
